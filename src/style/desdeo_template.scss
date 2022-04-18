@@ -1,0 +1,148 @@
+// change the theme
+/*$theme-colors: (
+  "primary": #7073DE,
+  "danger": #ff4136
+);*/
+
+$white: #ffffff;
+$primary:  #f4317a;
+$dark: #393f4c;
+$light: #f6f8fe;
+$secondary: #6d717c;
+$secondarylight: #cbd2e5;
+$header-height: 3rem;
+$nav-width: 68px;
+$normal-font-size: 1rem;
+$z-fixed: 100;
+$hover-color: #B02860;
+$disabled-color: #f5a7c8;
+
+$theme-colors: (
+    "light":      $light,
+    "dark":       $dark,
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "info":       #4177b6,
+);
+.body{
+  font-family: 'Poppins'!important;
+}
+.btn-primary {
+  color: $white !important;
+  background-color: $primary;
+}
+.btn-primary:hover{
+    background-color: $hover-color !important;
+}
+
+.btn-primary:disabled{
+    background-color: $disabled-color !important;
+}
+.btn-default {
+  color:  $secondary !important;
+  background-color: $light;
+}
+
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+  color: $primary !important;
+}
+
+.card-title{
+    font-weight: bold !important;
+    font-size:larger !important;
+    color: $primary !important;
+}
+
+
+
+.text-link{
+  color: #4177b6 !important;
+  text-align: center !important;
+  text-decoration: underline !important;
+}
+
+.height-100 {
+    height: 100vh
+}
+.nav-brand{
+  color: $secondarylight !important;
+  float: center !important;
+  text-align: center !important;
+  align-items: center !important;
+  margin-bottom: 2rem !important;
+  margin-right: 0% !important;
+}
+.nav-item {
+  min-width: 6rem !important;
+  float: left;
+  padding: 0.1rem;
+  color: $secondarylight !important;
+  text-decoration: none !important;
+  font-size: 1rem !important;
+  width: 100%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center !important; /* If you want the text to be centered */
+  margin-bottom: 0.725rem;
+}
+
+.nav-link {
+  color: $secondarylight !important;
+}
+
+.navbar a.active {
+  border-left: 5px solid $primary !important;
+  background-color: inherit !important;
+}
+
+.main-content{
+  padding-top: 1rem !important;
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+  overflow: hidden;
+}
+
+.main-content .card-title{
+  color: #f4317a !important;
+}
+
+.main-cards{
+  box-shadow: #6d717c;
+  border: 0px !important;
+  padding: 1rem !important;
+  box-shadow: 0 0.5rem 1rem $secondarylight !important;
+  min-height: 4rem !important;
+  color: $primary;
+
+}
+
+.carousel-dashboard{
+  border: 0px !important;
+  //box-shadow: 0 0.5rem 1rem $secondarylight !important;
+  min-height: 20rem;
+  max-height: 20rem;
+  color: #393f4c;
+}
+
+.carousel-item{
+  min-height: 20rem;
+  max-height: 20rem;
+}
+
+.carousel-item img{
+  object-fit:cover;
+  height:350px !important;
+  width:350px;
+}
+
+.carousel-item caption{
+  color:#393f4c !important;
+}
+
+.carousel-caption {
+  color: #000 !important;
+  background-color:rgba($color: $white, $alpha: 0.5)
+  
+}
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
