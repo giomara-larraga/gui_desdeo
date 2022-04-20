@@ -3,6 +3,7 @@
   "primary": #7073DE,
   "danger": #ff4136
 );*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap);
 
 $white: #ffffff;
 $primary:  #f4317a;
@@ -123,26 +124,112 @@ $theme-colors: (
   color: #393f4c;
 }
 
-.carousel-item{
+/*.carousel-item{
   min-height: 20rem;
   max-height: 20rem;
-}
+}*/
 
-.carousel-item img{
-  object-fit:cover;
+/*.carousel-item img{
+  object-fit:scale-down;
   height:350px !important;
   width:350px;
-}
+}*/
 
-.carousel-item caption{
+/*.carousel-item caption{
   color:#393f4c !important;
-}
+  position: relative !important;
+}*/
 
-.carousel-caption {
+/*.carousel-caption-dashboard {
   color: #000 !important;
   background-color:rgba($color: $white, $alpha: 0.5)
   
+}*/
+
+//Styles for login
+@media only screen and (max-width: 767px) {
+  .hide-on-mobile {
+      display: none;
+  }
 }
+
+.login-box {
+  //background: url('../images/390030-PCG0RP-708.svg');
+  background-color: $light;
+  background-attachment: fixed;
+  background-size: cover;
+  
+  background-position: center;
+  //padding: 50px;
+  margin: 50px auto;
+  //min-height: 700px;
+  -webkit-box-shadow: 0 2px 60px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 60px -5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: "Lato";
+  font-size: 24px;
+  text-align: left;
+  font-weight: bold;
+  color: #888888;
+  margin-bottom: 50px;
+}
+
+.logo .logo-font {
+  color: $dark;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+      font-size: 34px;
+  }
+}
+
+.header-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.login-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/*.carousel-login{
+  border: 0px !important;
+  //box-shadow: 0 0.5rem 1rem $secondarylight !important;
+  max-width: 80% !important;
+  margin: 0 auto;
+  padding: 2px;
+  text-align: center;
+}*/
+
+/*.carousel-item-login{
+  min-height: 80% !important;
+  min-width: 80% !important;
+  //max-height: 20rem;
+}*/
+
+/*.carousel-item-login img{
+  //height: 300rem !important; 
+  min-width: 80% !important;
+  min-height: 80% !important;
+  //margin-top: 30px !important;
+  //margin-bottom: 30px !important;
+}*/
+
+
+/*.login-block{
+  background: #DE6262; 
+background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  
+background: linear-gradient(to bottom, #FFB88C, #DE6262); 
+float:left;
+width:100%;
+padding : 50px 0;
+}*/
+
+//.banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

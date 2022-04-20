@@ -10,7 +10,7 @@ import logo from '../images/desdeo_logo.png';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import contributefigure from '../images/contribute.png';
-import landingpage from '../images/landing_page.png';
+import documentationfigure from '../images/learn.png';
 import background from '../images/background-login-2.svg';
 import loginfig from '../images/login.png';
 
@@ -53,7 +53,7 @@ export class LandingPage extends React.Component <{}, StateLP> {
   }
   componentDidMount() {
     
-    document.body.style.backgroundImage = "linear-gradient(to top, #393f4c, #6d717c)" 
+    document.body.style.backgroundColor = "#d3d5f7"
     //document.body.style.backgroundImage = 'url("https://preview.hqtemplate.com/preview16/images/background-login-2.svg")'
     document.body.style.backgroundSize = "cover"
   }
@@ -164,11 +164,30 @@ render() {
                   )}
           </Col>
           <Col sm={8} className="hide-on-mobile">
+            <Carousel className='carousel-login'>
+              <Carousel.Item interval={5000} className='carousel-item-login'>
                 <img
-                  src={landingpage}
+                  src="https://static.pexels.com/photos/33972/pexels-photo.jpg"
                   alt="Image One"
                   className='d-block img-fluid'
                 />
+                <Carousel.Caption>
+                  <h3>Learn more about DESDEO</h3>
+                  <p>Sample Text for Image One</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item interval={5000} className='carousel-item-login'>
+                <img
+                  src={contributefigure}
+                  alt="Contribute to DESDEO"
+                  className='d-block img-fluid'
+                />
+                <Carousel.Caption>
+                  <h3>Contribute to DESDEO</h3>
+                  <p>Sample Text for Image Two</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
           </Col>
         </Row>
       </div>

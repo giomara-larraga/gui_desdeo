@@ -8,11 +8,6 @@ import Form from 'react-bootstrap/Form'
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../images/desdeo_logo.png';
 import { Link } from 'react-router-dom';
-import { Carousel } from 'react-bootstrap';
-import contributefigure from '../images/contribute.png';
-import landingpage from '../images/landing_page.png';
-import background from '../images/background-login-2.svg';
-import loginfig from '../images/login.png';
 
 interface StateLP {
   isLogginActive: boolean;
@@ -52,33 +47,49 @@ export class LandingPage extends React.Component <{}, StateLP> {
     this.setState({isRegisterActive : false})
   }
   componentDidMount() {
-    
-    document.body.style.backgroundImage = "linear-gradient(to top, #393f4c, #6d717c)" 
-    //document.body.style.backgroundImage = 'url("https://preview.hqtemplate.com/preview16/images/background-login-2.svg")'
-    document.body.style.backgroundSize = "cover"
+    document.body.style.backgroundColor = "#6d717c"
   }
 render() {
   return (
     <Container>
-      <div className='login-box' >
-        <Row >
-          <Col sm={4}>
-            <div className='logo p-1'>
-            <img
+      <Row className="justify-content-center">
+        <Col md={12} lg={12} xl ={12}>
+          <Card className='shadow-lg o-hidden border-0 my-5'>
+            <Card.Body>
+              <Row>
+                <Col lg={7} className='d-none d-lg-flex my-5'>
+                  <div className='flex-grow-1 p-3 bg-login-image'>
+                    <div className='p-5'>
+                      <div className='logo'>
+                      <img
                           height="30"     
                           src={logo}
                           width="30"
                           className="d-inline-block align-top"
                           alt="DESDEO logo"
                         />
-              <span className='logo-font'> DESDEO</span>
-            </div>
-          {this.state.isLogginActive && (
+                        <strong>DESDEO</strong>
+                      </div>
+                      <h1 style={{color: "rgb(0,0,0)", fontSize:50, maxWidth:'70%', marginBottom:'1rem'}}>Enabling better decision making</h1>
+                      <p style={{textAlign: "left", transformOrigin: "bottom", marginBottom:'1rem', maxWidth:'80%'}}>
+                      DESDEO brings interactive methods closer to researchers and practitioners worldwide by providing them with implementations of interactive methods.
+                      It is a free and open-source Python-based framework for developing and experimenting with interactive multiobjective optimization. 
+                      We welcome you to utilize DESDEO and develop it further with us.
+                      </p>
+                      <Link to="/dashboard">
+                        <Button variant='primary' >Take a tour</Button>
+                      </Link>
+                      
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={5} className='p-5'>
+                  {this.state.isLogginActive && (
                     <div className='p-5'>
                       <div className='text-center'>
                         <h4 className='text-dark mb-4'>Welcome to DESDEO</h4>
                       </div>
-                      <Form className='login-form'>
+                      <Form className='user'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                           <Form.Label>Email address</Form.Label>
                           <Form.Control type="email" placeholder="Enter email" />
@@ -162,17 +173,12 @@ render() {
                         </div>
                       </div>
                   )}
-          </Col>
-          <Col sm={8} className="hide-on-mobile">
-                <img
-                  src={landingpage}
-                  alt="Image One"
-                  className='d-block img-fluid'
-                />
-          </Col>
-        </Row>
-      </div>
-        
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </Container>
   );
 }
